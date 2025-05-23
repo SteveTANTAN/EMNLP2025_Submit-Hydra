@@ -68,23 +68,14 @@ def run_LLM(prompt, model,temperature=0.4):
         )
 
     elif "llama70b" in model:
-        openai_api_key = "secret_pog2_dcce439883564bf490aa837029cae09f.rK8W9U49J6Kau1QRzjz8Fu8gskLgSMyr"
-        openai_api_base = "https://api.lambda.ai/v1"
-
+        openai_api_base = "http://localhost:6666/v1"
+        openai_api_key = "EMPTY"
         client = OpenAI(
+            # defaults to os.environ.get("OPENAI_API_KEY")
             api_key=openai_api_key,
             base_url=openai_api_base,
         )
-        model = "llama3.1-70b-instruct"
-
-        # openai_api_base = "http://localhost:6666/v1"
-        # openai_api_key = "EMPTY"
-        # client = OpenAI(
-        #     # defaults to os.environ.get("OPENAI_API_KEY")
-        #     api_key=openai_api_key,
-        #     base_url=openai_api_base,
-        # )
-        # model = "Meta-Llama-3.1-70B-Instruct"
+        model = "Meta-Llama-3.1-70B-Instruct"
     elif "llama" in model:
         openai_api_base = "http://localhost:6666/v1"
         openai_api_key = "EMPTY"
