@@ -3,7 +3,7 @@ from cot_prompt_list import *
 # from subgraph_utilts import *
 from subgraph_helper import *
 # from search import *
-serpapi_Key = "a553cf7d2fe8ec2322d3a508777126190a01d902aa1fead02509fa1aec55e64f"
+serpapi_Key = "your own keys"
 
 Num_run_LLM = 0
 Global_depth = 3
