@@ -75,8 +75,8 @@ if __name__ == '__main__':
         question_id = data[Q_id] 
         # obtained question subgraph from freebase
         graph, total_id_to_name_dict = load_and_check_subgraph(question, question_id,subgraph_db, 
-        2, NL_subgraph_db, question_string, data, topic_entity)
+        3, NL_subgraph_db, question_string, data, topic_entity)
 
         # obtained question subgraph from Wikipedia KG
         wiki_graph, wiki_total_id_to_name_dict = wiki_load_and_check_subgraph(question, question_id,wiki_subgraph_db, 
-        2, wiki_NL_subgraph_db, question_string, data, wiki_topic_entity, wiki_client)
+        3, wiki_NL_subgraph_db, question_string, data, wiki_topic_entity, wiki_client)
