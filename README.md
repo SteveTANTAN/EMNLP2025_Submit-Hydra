@@ -94,6 +94,7 @@ python hydra_main.py \
 | `--no-web`                                    | Disable web search                                                                           | on         |
 | `--no-wikidocu`                               | Disable retrieval from Wikipedia documents                                                   | on         |
 | `--model {gpt3,gpt4,llama,deepseek,llama70b}` | LLM backend.<br>`llama` = Llama‑3.1‑8B, `deepseek` = DeepSeek‑v3, `llama70b` = Llama‑3.1‑70B | `llama70b` |
+|                                               |                 `gpt3`  = GPT-3.5-Turbo,   `gpt4`  = GPT-4-Turbo                             |            |
 | `--depth {1,2,3,4}`                           | Maximum search depth                                                                         | `3`        |
 
 > Modules remain active unless explicitly disabled with a `--no‑*` flag.
