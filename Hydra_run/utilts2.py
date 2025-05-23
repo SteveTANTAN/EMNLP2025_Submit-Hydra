@@ -3,7 +3,7 @@ from cot_prompt_list import *
 # from subgraph_utilts import *
 from subgraph_helper import *
 # from search import *
-serpapi_Key = "your own keys"
+serpapi_Key = "your_own_keys"
 
 Num_run_LLM = 0
 Global_depth = 3
@@ -85,19 +85,7 @@ import requests
 from serpapi import GoogleSearch
 
 def search_google(query, num_results=10):
-    # """使用 Google 搜索 API 获取前 num_results 个搜索结果的文本。"""
-    # params = {
-    #     "q": query,
-    #     "num": num_results,
-    #     "api_key": "5680327412d0c587b8a60a19ae41f671d674d0163e63d60159eb276ce78b6e9f"
-    # }
-    
-    # search = GoogleSearch(params)
-    # results = search.run()
-    # print(results)
     text_data = []
-
-
     params = {
         "q": query,
         "location": "Austin, Texas, United States",
