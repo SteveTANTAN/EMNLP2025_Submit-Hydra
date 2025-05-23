@@ -11,18 +11,16 @@ Hydra unifies structured knowledge graphs, Wikipedia documents, and live web sea
 Hydra/
 ├── answer/                 evaluation helpers and scoring scripts
 ├── data/                   benchmark datasets (CWQ, AdvHotpotQA, QALD10-en, SimpleQA, WebQSP, Webquestions, Zeroshot RE)
-├── docs_pages/             extra documentation (MkDocs site)
 ├── Freebase/               Freebase environment setting. See Freebase/README.md for details.
 ├── freebase_subgraph/      Freebase subgraph KG
 ├── Hydra_run/              main source folder – run code from here
-│   ├── hydra_main.py       entry point (invokes `build_parser`)
+│   ├── hydra_main.py       entry point
 │   ├── cot_prompt_list.py  chain‑of‑thought prompts
-│   ├── emb_model/          embedding model wrappers
 │   ├── freebase_func.py    Freebase SPARQL helpers
 │   ├── wiki_client.py      WikiKG client helpers
-│   ├── subgraph_helper.py  subgraph construction utilities
-│   ├── subgraph_utilts.py  extra graph helpers
-│   ├── detected_kgsub.py   KG subgraph detection logic
+│   ├── subgraph_helper.py  extra graph helpers
+│   ├── subgraph_utilts.py  subgraph construction utilities
+│   ├── detected_kgsub.py   KG maximum subgraph detection
 │   ├── resp_process.py     response post‑processing
 │   ├── utilts.py           shared utilities
 │   └── utilts2.py          extra utilities
@@ -39,7 +37,7 @@ Hydra/
 ## Get started
 Before running Hydra, please ensure you have successfully installed **Freebase**, and **Wikidata** on your local machine. The comprehensive installation instructions and necessary configuration details can be found in the `/Freebase/README.md` and `/Wikidata/README.md`.
 
-Once, Wikidata setup, copy the `server_urls.txt` files from the Wikidata directory into the Hydra_run folder.
+Once Wikidata is set up, copy the `server_urls.txt` files from the Wikidata directory into the Hydra_run folder.
 
 You must use your own API in the `run_LLM` function of `utilts.py` for the APIs, and your own SerpAPI in `utilts2.py` for online search.
 
@@ -129,13 +127,13 @@ python detected_kgsub.py webqsp # positional: dataset name prefix
 ```
 
 ### KG usage:
-Hydra utilze the Freebase and Wikidata KG. For more details about installation, please take a look at the Freebase and Wikidata folder.
+Hydra utilze the Freebase and Wikidata KG. For more details about installation, please take a look at the Freebase and Wikidata folders.
 
 ---
 
 ## Evaluation
 
-Accuracy is computed with the answer in `answer/`. The positional argument is same with hydra_main.py
+Accuracy is computed with the answer in `Hydra/answer/`. The positional argument is the same as hydra_main.py
 
 ```bash
 python check_answer.py \
