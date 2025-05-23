@@ -121,6 +121,16 @@ python hydra_main.py webqsp \
 
 Outputs are stored under `/Hydra/answer/` and include logs, intermediate paths, and final predictions.
 
+### Subgraph Loading:
+Hydra will load the subgraph at maximum depths first from KG as part of the database preparation. The loading time depends on the environment setup and memory allocated for the Freebase and Wikidata server.
+You can run the subgraph loading individually:
+```bash
+python detected_kgsub.py webqsp # positional: dataset name prefix
+```
+
+### KG usage:
+Hydra utilze the Freebase and Wikidata KG. For more details about installation, please take a look at the Freebase and Wikidata folder.
+
 ---
 
 ## Evaluation
