@@ -1,5 +1,4 @@
 # Hydra: Structured Cross-Source Enhanced Large Language Model Reasoning (EMNLP 2025)
-# Code Documentation 
 ## News!
 Our paper has been accepted for publication at EMNLP 2025 Main Conference! 
 
@@ -17,7 +16,7 @@ If you are interested or inspired by this work, you can cite us by:
 }
 ```
 
-
+## Code Documentation 
 Hydra unifies structured knowledge graphs, Wikipedia documents, and live web search so that large language models can **reason over verified multi‑source evidence**. 
 
 ---
@@ -170,5 +169,6 @@ python check_answer.py \
 
 ## Claims
 This project uses the Apache 2.0 protocol. The project assumes no legal responsibility for any of the model's output and will not be held liable for any damages that may result from the use of the resources and output.
+
 
 
